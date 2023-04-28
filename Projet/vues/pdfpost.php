@@ -1,8 +1,9 @@
 <?php
 require('../vendor/autoload.php');
 $con=mysqli_connect('localhost','root','','pepiniere');
-$res=mysqli_query($con,"select * from article= ");
+$res=mysqli_query($con,"select * from panier");
 if(mysqli_num_rows($res)>0){
+	
 	$html.='<table border="1" style="border-collapse:collapse ;
  border: 3px solid black;
  width: 700px;
@@ -11,9 +12,9 @@ if(mysqli_num_rows($res)>0){
 
 " align="center">';
 
-		$html.='<tr><td>Titre</td><td>Date</td><td>Description</td></tr>';
+		$html.='<tr><td>Article</td><td>Quantite</td></tr>';
 		while($row=mysqli_fetch_assoc($res)){
-			$html.='<tr><td>'.$row['titre'].'</td><td>'.$row['date'].'</td><td>'.$row['description'].'</td></tr>';
+			$html.='<tr><td>'.$row['idArticle'].'</td><td>'.$row['quantiteArticle'].'</td></tr>';
 		}
 	$html.='</table>';
 }else{

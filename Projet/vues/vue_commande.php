@@ -80,7 +80,7 @@
                 <li class="active"><a href="./index.php" style="text-align:center;"><h1 >Votre Commande a ete Enregistre Prix Total est :: <?=number_format($total, 2)?>$<h1></a></li>
             </ul>
             <td>
-                                 <a href="vues/pdfpost.php" class="text-warning" ><h4>Download list of posts as PDF <i class="fa fa-download" aria-hidden="true"></i></h4> </a>
+                                 <a href="vues/pdfpost.php" class="text-warning" ><h4>Telecharger Contenu du Panier <i class="fa fa-download" aria-hidden="true"></i></h4> </a>
                             </td>
         </div>
                 </div>
