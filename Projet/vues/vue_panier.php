@@ -1,5 +1,45 @@
 <?php $titre="Panier d'achat"?>
 <?php ob_start();?>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+           <script src="https://code.jquery.com/jquery-3.5.1.js"></script>  
+           <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>      
+           <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+           <script src="../js/jquery.superslides.min.js"></script>
+  <script src="../js/images-loded.min.js"></script>
+  <script src="../js/isotope.min.js"></script>
+  <script src="../js/baguetteBox.min.js"></script>
+  <script src="../js/picker.js"></script>
+  <script src="../js/picker.date.js"></script>
+  <script src="../js/picker.time.js"></script>
+  <script src="../js/legacy.js"></script>
+  <script src="../js/form-validator.min.js"></script>
+    <script src="../js/contact-form-script.js"></script>
+    <script src="../js/custom.js"></script>
+        <script src="../js/progressbar.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="../css/templatemo-style.css">
+    <title> Afficher Liste posts </title>
+    <style type="text/css">
+.myOtherTable { background-color:#85dcc2;border-collapse:collapse;color:#000;font-size:14px; }
+.myOtherTable th { background-color:#3949c6;color:white;width:10%; }
+.myOtherTable td, .myOtherTable th { padding:1px;border:1; }
+</style>
     <div>
         <img id="radin" src="/images/radin.jpg">
     </div>
@@ -22,8 +62,8 @@
                        }else{
                     ?>
                     <h4 class="nom">Votre panier d'achat</h4>
-                    <table class="table table-striped table-bordered fond-dark" id="panier">
-                        <thead class="thead-light">
+                    <table id="employee_data" class="table table-hover tm-table-small tm-product-table">
+                             <thead class="thead-light">
                             <tr>
                                 <th>Article</th>
                                 <th>Prix unitaire</th>
@@ -105,6 +145,14 @@
             </div>
         </div>
     </div>
+    </html>
+<script>  
+ $(document).ready(function(){  
+      $('#employee_data').DataTable();  
+ });  
+ </script>  
+    <!-- ALL PLUGINS -->
+        <script src="../js/bootstrap.min.js"></script>
 <?php $contenu = ob_get_clean();?>
 <?php require("gabarits/template.php");?>
 <script>
