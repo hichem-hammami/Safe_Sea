@@ -72,10 +72,7 @@
                                 <th>Suppression</th>
                             </tr>
                         </thead>
-                        
-                        <tbody>
-                            <tr>
-                            <?php
+                        <?php
                             $total = 0;
                             foreach($data as $lignePanier){
                                 $identifiant = $lignePanier["idArticle"];
@@ -87,9 +84,9 @@
                                 $total += $quantite * $prix;
                             
                         ?>
-
+                        <tbody>
+                            <tr>
                                 <td>
-                               
                                     <div class="card">
                                         <div class="card-body">
                                             <img class="img-thumbnail" src="<?=$image?>" alt="<?=$nom?>" width="80">
